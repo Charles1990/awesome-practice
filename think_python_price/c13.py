@@ -114,15 +114,76 @@
 # print(is_anagram(' ',' ')) # is it ok or not?!
 
 
-def is_anagram(ele,ele2):
-    if len(ele)==len(ele2):
-        ele=list(ele)
-        ele2=list(ele2)
-        ele.sort()
-        ele2.sort()
-        return ele==ele2
-    else:
-        return False
-print(is_anagram('orchestra tvnm','carthorse mvtn'))
-print(is_anagram('sport','porta'))
-print(is_anagram(' ',' ')) # is it ok or not?!
+# def is_anagram(ele,ele2):
+#     if len(ele)==len(ele2):
+#         ele=list(ele)
+#         ele2=list(ele2)
+#         ele.sort()
+#         ele2.sort()
+#         return ele==ele2
+#     else:
+#         return False
+# print(is_anagram('orchestra tvnm','carthorse mvtn'))
+# print(is_anagram('sport','porta'))
+# print(is_anagram(' ',' ')) # is it ok or not?!
+
+
+# def is_anagram(ele,ele2):
+#     if len(ele)==len(ele2):
+#         ele=list(ele)
+#         ele2=list(ele2)
+#         ele.sort()
+#         ele2.sort()
+#         return ele==ele2
+#     else:
+#         return False
+
+# print(is_anagram('orchestra tvnm','carthorse mvtn'))
+
+# def has_couple(ele):
+#     for i in ele:
+#         if ele.count(i)>1:
+#             return True
+#     return False
+
+# print(has_couple([1,2,2,3,4]))
+
+# def remove_couple(ele):
+#     res=[]
+#     for i in ele:
+#         if i not in res:
+#             res.append(i)
+
+#     return res
+
+# print(remove_couple([1,2,3,4,4]))
+
+import time
+
+def build_list1():
+    fin=open('/Users/yezhibin/awesome-practice/think_python_price/word.txt')
+    list1=[]
+    for line in fin:
+        word=line.strip()
+        list1.append(word)
+    return list1
+
+def build_list2():
+    fin=open('/Users/yezhibin/awesome-practice/think_python_price/word.txt')
+    list2=[]
+    for line in fin:
+        word=line.strip()
+        list2=list2+[word]
+    return list2
+
+start_time=time.time()
+build_list1()
+function_time1=time.time()-start_time
+
+start_time=time.time()
+build_list2()
+function_time2=time.time()-start_time
+
+print(function_time1)
+print(function_time2)
+
